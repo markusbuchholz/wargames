@@ -58,3 +58,4 @@ solara run app.py --host=0.0.0.0 --port 8765
 - [TrickHLA (NASA)](https://github.com/nasa/TrickHLA)
 - [Pitch-Technologies FedProClient](https://github.com/Pitch-Technologies/FedProClient)
 - [intro-gispro](https://github.com/giswqs/intro-gispro)
+- [book-gispro](https://gispro.gishub.org/)
