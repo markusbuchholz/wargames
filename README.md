@@ -59,3 +59,4 @@ solara run app.py --host=0.0.0.0 --port 8765
 - [Pitch-Technologies FedProClient](https://github.com/Pitch-Technologies/FedProClient)
 - [intro-gispro](https://github.com/giswqs/intro-gispro)
 - [book-gispro](https://gispro.gishub.org/)
+- [geoai](https://github.com/opengeos/geoai)
