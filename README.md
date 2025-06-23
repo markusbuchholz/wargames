@@ -60,13 +60,13 @@ solara run app.py --host=0.0.0.0 --port 8765
 - [intro-gispro](https://github.com/giswqs/intro-gispro)
 - [book-gispro](https://gispro.gishub.org/)
 - [geoai](https://github.com/opengeos/geoai)
-- [An Introduction to the HLA by Roger McFarlane](https://faculty.sites.iastate.edu/tesfatsi/archive/tesfatsi/HLAIntro.RMcFarlane.pdf) :contentReference[oaicite:0]{index=0}
-- [The HLA Tutorial by Pitch Technologies](https://pitchtechnologies.com/hlatutorial/) :contentReference[oaicite:1]{index=1}
-- [HLA Evolved Starter Kit Tutorial (PDF) by Pitch Technologies](https://pitchtechnologies.com/wp-content/uploads/2020/06/TheHLAtutorial.pdf) :contentReference[oaicite:2]{index=2}
-- [Developing the HLA Tutorial Part Two: Towards Federation Design Patterns (PDF)](https://pitchtechnologies.com/wp-content/uploads/2023/03/13F-SIW-031.pdf) :contentReference[oaicite:3]{index=3}
-- [High Level Architecture (Wikipedia)](https://en.wikipedia.org/wiki/High_Level_Architecture) :contentReference[oaicite:4]{index=4}
-- [Simulation Interoperability Standards Organization (SISO) (Wikipedia)](https://en.wikipedia.org/wiki/Simulation_Interoperability_Standards_Organization) :contentReference[oaicite:5]{index=5}
-- [Run-time infrastructure (RTI) (Wikipedia)](https://en.wikipedia.org/wiki/Run-time_infrastructure_(simulation)) :contentReference[oaicite:6]{index=6}
-- [High-Level Architecture support in FlightGear (FlightGear wiki)](https://wiki.flightgear.org/High-Level_Architecture) :contentReference[oaicite:7]{index=7}
-- [Distributed Interactive Simulation (DIS) (Wikipedia)](https://en.wikipedia.org/wiki/Distributed_Interactive_Simulation) :contentReference[oaicite:8]{index=8}
-- [Guide to Distributed Simulation with HLA (SpringerLink)](https://link.springer.com/book/10.1007/978-3-319-61267-6) :contentReference[oaicite:9]{index=9}
+- [An Introduction to the HLA by Roger McFarlane](https://faculty.sites.iastate.edu/tesfatsi/archive/tesfatsi/HLAIntro.RMcFarlane.pdf)
+- [The HLA Tutorial by Pitch Technologies](https://pitchtechnologies.com/hlatutorial/)
+- [HLA Evolved Starter Kit Tutorial (PDF) by Pitch Technologies](https://pitchtechnologies.com/wp-content/uploads/2020/06/TheHLAtutorial.pdf)
+- [Developing the HLA Tutorial Part Two: Towards Federation Design Patterns (PDF)](https://pitchtechnologies.com/wp-content/uploads/2023/03/13F-SIW-031.pdf)
+- [High Level Architecture (Wikipedia)](https://en.wikipedia.org/wiki/High_Level_Architecture)
+- [Simulation Interoperability Standards Organization (SISO) (Wikipedia)](https://en.wikipedia.org/wiki/Simulation_Interoperability_Standards_Organization)
+- [Run-time infrastructure (RTI) (Wikipedia)](https://en.wikipedia.org/wiki/Run-time_infrastructure_(simulation))
+- [High-Level Architecture support in FlightGear (FlightGear wiki)](https://wiki.flightgear.org/High-Level_Architecture)
+- [Distributed Interactive Simulation (DIS) (Wikipedia)](https://en.wikipedia.org/wiki/Distributed_Interactive_Simulation)
+- [Guide to Distributed Simulation with HLA (SpringerLink)](https://link.springer.com/book/10.1007/978-3-319-61267-6)
