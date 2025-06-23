@@ -70,3 +70,4 @@ solara run app.py --host=0.0.0.0 --port 8765
 - [High-Level Architecture support in FlightGear (FlightGear wiki)](https://wiki.flightgear.org/High-Level_Architecture)
 - [Distributed Interactive Simulation (DIS) (Wikipedia)](https://en.wikipedia.org/wiki/Distributed_Interactive_Simulation)
 - [Guide to Distributed Simulation with HLA (SpringerLink)](https://link.springer.com/book/10.1007/978-3-319-61267-6)
+- [NASA HLA](https://ntrs.nasa.gov/api/citations/20010016107/downloads/20010016107.pdf)
