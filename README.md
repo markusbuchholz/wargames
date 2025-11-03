@@ -74,3 +74,4 @@ solara run app.py --host=0.0.0.0 --port 8765
 - [GIS](https://geog-312.gishub.org/)
 - [Game Theory](https://plato.stanford.edu/entries/game-theory/)
 - [pettingzoo](https://pettingzoo.farama.org/index.html)
+- [farama](https://farama.org/projects)
