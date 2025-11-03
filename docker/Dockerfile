@@ -1,54 +1,30 @@
-FROM ubuntu:22.04
+# Dockerfile
+FROM python:3.13-bookworm
 
-ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
+# If MODEL_DIR is set at runtime, we'll auto-run that app. Otherwise we drop to a shell.
+ENV MODEL_DIR=""
+ENV PORT=8765
+ENV HOST=0.0.0.0
 
-# 1) base system + python + swig
-RUN apt-get update && apt-get install -y \
-    python3 \
-    python3-pip \
-    python3-dev \
-    build-essential \
-    cmake \
-    pkg-config \
-    git \
-    wget \
-    ffmpeg \
-    libgl1 \
-    libglvnd0 \
-    libglx0 \
-    libegl1 \
-    libxext6 \
-    libx11-6 \
-    x11-apps \
-    nano \
-    swig \
-    && rm -rf /var/lib/apt/lists/*
+WORKDIR /opt
 
-# 2) python packages (combined into one layer)
-# - 'pettingzoo[all]' already includes gymnasium, multi_agent_ale_py, and pygame
-#   so we just need to install griddly and autorom alongside it.
-RUN pip install --no-cache-dir --upgrade pip \
-    && pip install --no-cache-dir \
-        griddly \
-        autorom \
-        'pettingzoo[all]'
+# tools to clone
+RUN apt-get update && apt-get install -y --no-install-recommends git \
+  && rm -rf /var/lib/apt/lists/*
 
-# 3) Run AutoROM to accept license
-RUN AutoROM --accept-license
-# if you hit a NumPy mismatch, try:
-# RUN pip install --no-cache-dir "numpy<2.0"
+# sources
+RUN git clone https://github.com/projectmesa/mesa.git mesa-main \
+ && git clone https://github.com/projectmesa/mesa-examples.git mesa-examples
 
-# 4) nvidia / gui env (keep from your original)
-ENV NVIDIA_VISIBLE_DEVICES=all
-ENV NVIDIA_DRIVER_CAPABILITIES=graphics,utility,compute
-ENV QT_X11_NO_MITSHM=1
+# install mesa + solara
+RUN python -m pip install --upgrade pip \
+ && pip install -e mesa-main[rec] \
+ && pip install --no-cache-dir solara
 
-# 5) app location
-WORKDIR /app
+# Expose Solara’s default port
+EXPOSE 8765
 
-# (optional) copy your example into the image:
-# COPY ./src/Griddly/python/examples/Stochasticity /app
-# or just mount it at runtime: -v $(pwd):/app
-
-# 6) default
-CMD ["bash"]
+# If MODEL_DIR is provided, run that app. Otherwise, give you a shell.
+# No extra scripts; just standard bash.
+CMD ["/bin/bash", "-lc", "if [ -n \"$MODEL_DIR\" ]; then cd \"$MODEL_DIR\" && python -m solara run app.py --host=$HOST --port=$PORT; else exec bash; fi"]
